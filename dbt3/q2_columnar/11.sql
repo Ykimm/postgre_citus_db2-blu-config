@@ -7,9 +7,9 @@ select
 	ps_partkey,
 	sum(ps_supplycost * ps_availqty) as value
 from
-	partsupp,
-	supplier,
-	nation
+	partsupp_columnar,
+	supplier_columnar,
+	nation_columnar
 where
 	ps_suppkey = s_suppkey
 	and s_nationkey = n_nationkey
