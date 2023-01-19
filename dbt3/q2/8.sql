@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R National Market Share Query (Q8)
 -- Functional Query Definition
 -- Approved February 1998
+\timing
 select
 	o_year,
 	sum(case
