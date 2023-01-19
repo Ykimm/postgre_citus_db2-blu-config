@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R Potential Part Promotion Query (Q20)
 -- Function Query Definition
 -- Approved February 1998
+\timing
 select
 	s_name,
 	s_address
