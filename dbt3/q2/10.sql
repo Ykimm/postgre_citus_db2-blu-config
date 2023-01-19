@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R Returned Item Reporting Query (Q10)
 -- Functional Query Definition
 -- Approved February 1998
+\timing
 select
 	c_custkey,
 	c_name,
