@@ -13,15 +13,15 @@ from
 		select
 			n1.n_name as supp_nation,
 			n2.n_name as cust_nation,
-			extract(year from l_shipdate) as l_year,
+			extract(year from l_shipdate_columnar) as l_year,
 			l_extendedprice * (1 - l_discount) as volume
 		from
-			supplier,
-			lineitem,
-			orders,
-			customer,
-			nation n1,
-			nation n2
+			supplier_columnar,
+			lineitem_columnar,
+			orders_columnar,
+			customer_columnar,
+			nation_columnar n1,
+			nation_columnar n2
 		where
 			s_suppkey = l_suppkey
 			and o_orderkey = l_orderkey
