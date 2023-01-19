@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R Suppliers Who Kept Orders Waiting Query (Q21)
 -- Functional Query Definition
 -- Approved February 1998
+\timing
 select
 	s_name,
 	count(*) as numwait
