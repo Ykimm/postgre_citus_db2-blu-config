@@ -13,10 +13,10 @@ select
 	c_phone,
 	c_comment
 from
-	customer,
-	orders,
-	lineitem,
-	nation
+	customer_columnar,
+	orders_columnar,
+	lineitem_columnar,
+	nation_columnar
 where
 	c_custkey = o_custkey
 	and l_orderkey = o_orderkey
