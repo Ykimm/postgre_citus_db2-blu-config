@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R Discounted Revenue Query (Q19)
 -- Functional Query Definition
 -- Approved February 1998
+\timing
 select
 	sum(l_extendedprice* (1 - l_discount)) as revenue
 from
