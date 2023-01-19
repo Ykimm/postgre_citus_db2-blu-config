@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R Global Sales Opportunity Query (Q22)
 -- Functional Query Definition
 -- Approved February 1998
+\timing
 select
 	cntrycode,
 	count(*) as numcust,
