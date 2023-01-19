@@ -7,15 +7,15 @@ select
 	s_name,
 	s_address
 from
-	supplier,
-	nation
+	supplier_columnar,
+	nation_columnar
 where
 	s_suppkey in (
 		select
 			distinct (ps_suppkey)
 		from
-			partsupp,
-			part
+			partsupp_columnar,
+			part_columnar
 		where
 			ps_partkey=p_partkey
 			and p_name like 'navy%'
@@ -23,7 +23,7 @@ where
 				select
 					0.5 * sum(l_quantity)
 				from
-					lineitem
+					lineitem_columnar
 				where
 					l_partkey = ps_partkey
 					and l_suppkey = ps_suppkey
