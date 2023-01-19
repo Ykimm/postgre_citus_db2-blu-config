@@ -8,7 +8,7 @@ with revenue0 as (
 		l_suppkey as supplier_no,
 		sum(l_extendedprice * (1 - l_discount)) as total_revenue
 	from
-		lineitem
+		lineitem_columnar
 	where
 		l_shipdate >= date('1993-12-01')
 		and l_shipdate < date('1993-12-01') + interval '90 days'
@@ -22,14 +22,14 @@ select
 	s_phone,
 	total_revenue
 from
-	supplier,
-	revenue0
+	supplier_columnar,
+	revenue0_columnar
 where
 	s_suppkey = supplier_no
 	and total_revenue = (
 		select
 			max(total_revenue)
 		from
-			revenue0
+			revenue0_columnar
 	)
 ;
