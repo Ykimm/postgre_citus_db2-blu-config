@@ -2,6 +2,7 @@
 -- TPC-H/TPC-R Customer Distribution Query (Q13)
 -- Functional Query Definition
 -- Approved February 1998
+\timing
 select
 	c_count,
 	count(*) as custdist
