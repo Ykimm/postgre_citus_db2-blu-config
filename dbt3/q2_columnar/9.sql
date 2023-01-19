@@ -14,12 +14,12 @@ from
 			extract(year from o_orderdate) as o_year,
 			l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount
 		from
-			part,
-			supplier,
-			lineitem,
-			partsupp,
-			orders,
-			nation
+			part_columnar,
+			supplier_columnar,
+			lineitem_columnar,
+			partsupp_columnar,
+			orders_columnar,
+			nation_columnar
 		where
 			s_suppkey = l_suppkey
 			and ps_suppkey = l_suppkey
