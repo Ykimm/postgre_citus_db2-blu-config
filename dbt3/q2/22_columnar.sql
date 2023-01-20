@@ -13,7 +13,7 @@ from
 			substr(c_phone, 1, 2) as cntrycode,
 			c_acctbal
 		from
-			customer
+			customer_columnar
 		where
 			substr(c_phone, 1, 2) in
 				('14', '28', '11', '17', '10', '26', '30')
@@ -21,7 +21,7 @@ from
 				select
 					avg(c_acctbal)
 				from
-					customer
+					customer_columnar
 				where
 					c_acctbal > 0.00
 					and substr(c_phone, 1, 2) in
@@ -31,7 +31,7 @@ from
 				select
 					*
 				from
-					orders
+					orders_columnar
 				where
 					o_custkey = c_custkey
 			)

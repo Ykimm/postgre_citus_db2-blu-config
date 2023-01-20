@@ -9,9 +9,9 @@ select
 	o_orderdate,
 	o_shippriority
 from
-	customer,
-	orders,
-	lineitem
+	customer_columnar,
+	orders_columnar,
+	lineitem_columnar
 where
 	c_mktsegment = 'FURNITURE'
 	and c_custkey = o_custkey

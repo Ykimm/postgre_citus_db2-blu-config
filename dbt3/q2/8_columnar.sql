@@ -16,14 +16,14 @@ from
 			l_extendedprice * (1 - l_discount) as volume,
 			n2.n_name as nation
 		from
-			part,
-			supplier,
-			lineitem,
-			orders,
-			customer,
-			nation n1,
-			nation n2,
-			region
+			part_columnar,
+			supplier_columnar,
+			lineitem_columnar,
+			orders_columnar,
+			customer_columnar,
+			nation_columnar n1,
+			nation_columnar n2,
+			region_columnar
 		where
 			p_partkey = l_partkey
 			and s_suppkey = l_suppkey
